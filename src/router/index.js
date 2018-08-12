@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from './../slides/home'
 import VariableFonts from '../slides/variable-fonts'
-import GridTemplate from '../slides/grid-template'
+import BlendMode from '../slides/blend-mode'
 import GridTemplateShort from '../slides/grid-template-short'
 import GridGap from './../slides/grid-gap'
 import GridTemplateAreas from './../slides/grid-template-areas'
@@ -22,7 +22,7 @@ export default new Router({
   routes: [
     {path: '/', name: 'home', component: Home},
     {path: '/variable-fonts', name: 'variable-fonts', component: VariableFonts},
-    {path: '/grid-template', name: 'grid-template', component: GridTemplate},
+    {path: '/blend-mode', name: 'blend-mode', component: BlendMode},
     {path: '/grid-template-short', name: 'grid-template-short', component: GridTemplateShort},
     {path: '/grid-gap', name: 'grid-gap', component: GridGap},
     {path: '/grid-template-areas', name: 'grid-template-areas', component: GridTemplateAreas},
