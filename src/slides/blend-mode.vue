@@ -6,8 +6,6 @@
     </p>
     <div class="info">
       <h1>CSS Blend Mode</h1>
-      <p>fr, auto-fill</p>
-      <p>repeat, minmax</p>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 15">{{ n }}</p>
@@ -15,17 +13,28 @@
         <div class="css-area">
           <pre rel="css">
 
-<span>.grid-container</span> {
-  display: grid;
-  grid-template-columns: <textarea name="grid" v-model="gridTemplateColumns"></textarea>
-  grid-template-rows: <textarea name="grid" v-model="gridTemplateRows"></textarea>
+<span>.wrapper</span> {
+  background: url(./../assets/images/bck.jpg),
+              url(./../assets/images/girl.jpg)
+  background-blend-mode: <textarea name="grid" v-model="blendMode"></textarea>;
 }
+
+
+
+
+
+// normal | multiply | screen | overlay
+// darken | lighten | color-dodge | color-burn
+// hard-light | soft-light | difference | exclusion
+// hue | saturation | color | luminosity
           </pre>
         </div>
       </div>
     </div>
 
-    <div class="grid-block">
+    <div class="grid-block" >
+      <div class="photoshop"></div>
+      <div class="css-mode" :style="{backgroundBlendMode: blendMode}"></div>
     </div>
   </div>
 </template>
@@ -34,17 +43,19 @@
   export default {
     data() {
       return {
-        display: '',
-        gridTemplateColumns: '',
-        gridTemplateRows: '',
+        blendMode: 'multiply',
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .grid-block{
+  .photoshop{
+    height: 50%;
+    background: url(./../assets/images/blend-mode.jpg) 0 0 / contain no-repeat;
+  }
+  .css-mode{
+    height: 50%;
     background: url(./../assets/images/bck.jpg) 0 0 / contain no-repeat, url(./../assets/images/girl.jpg) 0 0 / contain no-repeat;
-    background-blend-mode: multiply;
   }
 </style>
