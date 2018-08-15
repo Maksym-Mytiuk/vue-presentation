@@ -2,7 +2,7 @@
   <div class="container">
     <p style="position: absolute; top: 0;">
       <router-link to="/">Go to Home</router-link>
-      <router-link to="/blend-mode">Go to blend-mode</router-link>
+      <router-link to="/usage-vf">Can i use VF</router-link>
     </p>
     <div class="info">
       <h1>VARIABLE FONTS</h1>

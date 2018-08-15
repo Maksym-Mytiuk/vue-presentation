@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/usage-vf">Go to display-grid</router-link>
-      <router-link to="/blend-mode-2">Go to Blend Mode</router-link>
+      <router-link to="/blend-mode">Go to Blend Mode</router-link>
+      <router-link to="/blend-mode-3">Go to Blend Mode</router-link>
     </p>
     <div class="info">
       <h1>CSS Blend Mode</h1>
