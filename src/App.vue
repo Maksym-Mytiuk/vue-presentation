@@ -7,9 +7,7 @@
 <script>
   export default {
     name: 'app',
-    methods: {
-
-    }
+    methods: {}
   }
 </script>
 
@@ -70,8 +68,12 @@
     grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-template-rows: minmax(550px, auto);
     margin: 4em 25px 0;
-    > p{
-      width: 95%;display: flex;justify-content: space-between;position: absolute; top: -10px;
+    > p {
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: -10px;
     }
     .css-area {
       position: relative;
@@ -89,8 +91,8 @@
         outline: 1px solid slategrey;
       }
     }
-    .info{
-      p{
+    .info {
+      p {
         font-size: 1.25em;
         line-height: 1;
       }
@@ -142,13 +144,37 @@
   }
 
   .grid-item {
-    background: #0092dd;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
-    border: 1px solid;
     padding: 5px;
+    font-size: 2em;
+    color: #fff;
+    background: #0092dd;
+    border: 1px solid;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    outline: 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #4178ff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .1s linear;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.3);
   }
 </style>

@@ -4,21 +4,19 @@ import Router from 'vue-router'
 import Home from './../slides/home'
 import VariableFonts from '../slides/variable-fonts'
 import UsageVf from '../slides/usage-vf'
+import BackDropFilter from '../slides/backdrop-filter'
+import UsageBf from '../slides/usage-bf'
 import BlendMode from '../slides/blend-mode'
 import BlendMode2 from '../slides/blend-mode-2'
 import BlendMode3 from '../slides/blend-mode-3'
 import UsageBlendMode from '../slides/usage-blend-mode'
-import GridTemplateShort from '../slides/grid-template-short'
-import GridGap from './../slides/grid-gap'
-import GridTemplateAreas from './../slides/grid-template-areas'
-import GridBoxAligment from './../slides/grid-box-alignment'
-import GridTrack from './../slides/grid-track'
-import GridStartEnd from './../slides/start-end'
-import GridRowColumns from './../slides/rows-columns'
-import GridArea from './../slides/grid-area'
-import GridAutoFlow from './../slides/grid-auto-flow'
-import Usage from './../slides/usage'
-import Finish from './../slides/finish'
+import Meter from '../slides/meter'
+import Meter2 from '../slides/meter-2'
+import UsageMeter from '../slides/usage-meter'
+import ConicGradient from '../slides/conic-gradient'
+import ConicGradient2 from '../slides/conic-gradient-2'
+import UsageCg from '../slides/usage-cg'
+
 
 Vue.use(Router);
 
@@ -27,20 +25,17 @@ export default new Router({
     {path: '/', name: 'home', component: Home},
     {path: '/variable-fonts', name: 'variable-fonts', component: VariableFonts},
     {path: '/usage-vf', name: 'usage-vf', component: UsageVf},
+    {path: '/backdrop-filter', name: 'backdrop-filter', component: BackDropFilter},
+    {path: '/usage-bf', name: 'usage-bf', component: UsageBf},
     {path: '/blend-mode', name: 'blend-mode', component: BlendMode},
     {path: '/blend-mode-2', name: 'blend-mode-2', component: BlendMode2},
     {path: '/blend-mode-3', name: 'blend-mode-3', component: BlendMode3},
     {path: '/usage-blend-mode', name: 'usage-blend-mode', component: UsageBlendMode},
-    {path: '/grid-template-short', name: 'grid-template-short', component: GridTemplateShort},
-    {path: '/grid-gap', name: 'grid-gap', component: GridGap},
-    {path: '/grid-template-areas', name: 'grid-template-areas', component: GridTemplateAreas},
-    {path: '/grid-box-alignment', name: 'grid-box-alignment', component: GridBoxAligment},
-    {path: '/grid-track', name: 'grid-track', component: GridTrack},
-    {path: '/start-end', name: 'start-end', component: GridStartEnd},
-    {path: '/rows-columns', name: 'rows-columns', component: GridRowColumns},
-    {path: '/grid-area', name: 'grid-area', component: GridArea},
-    {path: '/grid-auto-flow', name: 'grid-auto-flow', component: GridAutoFlow},
-    {path: '/usage', name: 'usage', component: Usage},
-    {path: '/finish', name: 'grid-auto-flow', component: Finish},
+    {path: '/meter', name: '/meter', component: Meter},
+    {path: '/meter-2', name: 'meter-2', component: Meter2},
+    {path: '/usage-meter', name: 'usage-blend-mode', component: UsageMeter},
+    {path: '/conic-gradient', name: 'conic-gradient', component: ConicGradient},
+    {path: '/conic-gradient-2', name: 'conic-gradient', component: ConicGradient2},
+    {path: '/usage-cg', name: 'usage-cg', component: UsageCg},
   ]
 })

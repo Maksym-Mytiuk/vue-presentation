@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/variable-fonts">Go to VF</router-link>
-      <router-link to="/backdrop-filter">Go to Backdrop-Filter</router-link>
+      <router-link to="/conic-gradient-2">Go to Conic Gradient</router-link>
+      <router-link to="/usage-cg">Can I use CG</router-link>
     </p>
     <div class="img-block">
       <img src="./../assets/images/usage-vf.png" class="img">

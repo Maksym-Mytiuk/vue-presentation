@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/usage-vf">Go to display-grid</router-link>
+      <router-link to="/usage-bf">Can I usage BF</router-link>
       <router-link to="/blend-mode-2">Go to Blend Mode</router-link>
     </p>
     <div class="info">
@@ -16,7 +16,8 @@
 <span>.wrapper</span> {
   background: url(./../assets/images/bck.jpg),
               url(./../assets/images/girl.jpg)
-  background-blend-mode: <textarea name="grid" v-model="blendMode"></textarea>;
+  background-position: <textarea v-model="backgroundPosition"></textarea>;
+  background-blend-mode: <textarea v-model="blendMode"></textarea>;
 }
 
 
@@ -33,7 +34,7 @@
     </div>
 
     <div class="grid-block" >
-      <div class="css-mode" :style="{backgroundBlendMode: blendMode}"></div>
+      <div class="css-mode" :style="{backgroundBlendMode: blendMode, backgroundPosition: backgroundPosition}"></div>
     </div>
   </div>
 </template>
@@ -42,6 +43,7 @@
   export default {
     data() {
       return {
+        backgroundPosition: '',
         blendMode: 'normal',
       }
     }

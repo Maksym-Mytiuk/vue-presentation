@@ -95,27 +95,5 @@
     height: 285px;
   }
 
-  input[type="range"] {
-    -webkit-appearance: none;
-    background-color: #bdc3c7;
-    width: 80%;
-    height: 10px;
-    border-radius: 10px;
-    margin: 0 auto;
-    outline: 0;
-  }
 
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #4178ff;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .1s linear;
-  }
-
-  input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.3);
-  }
 </style>

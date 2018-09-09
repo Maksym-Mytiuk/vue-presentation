@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/usage-vf">Go to Blend Mode</router-link>
-      <router-link to="/usage-blend-mode">Go to Can i use Blend Mode</router-link>
+      <router-link to="/blend-mode-2">Go to Blend Mode</router-link>
+      <router-link to="/usage-blend-mode">Go to Can I use Blend Mode</router-link>
     </p>
     <div class="info">
       <h1>CSS Blend Mode</h1>
@@ -13,10 +13,10 @@
         <div class="css-area">
           <pre rel="css">
 
-<span>.wrapper</span> {
-  background: url(./../assets/images/bck.jpg),
-              url(./../assets/images/girl.jpg)
-  background-blend-mode: <textarea name="grid" v-model="blendMode"></textarea>;
+<span>.text</span> {
+  mix-blend-mode: <textarea v-model="blendMode"></textarea>;
+  color: <textarea v-model="color"></textarea>;
+  background: <textarea v-model="bgColor"></textarea>;
 }
 
 
@@ -32,8 +32,12 @@
       </div>
     </div>
 
-    <div class="grid-block" >
-      <div class="css-mode" :style="{backgroundBlendMode: blendMode}"></div>
+    <div class="grid-block">
+      <div class="css-mode">
+        <p class="text" :style="{mixBlendMode: blendMode, color: color, backgroundColor: bgColor}">
+          MIX<br>BLEND<br>MODE
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -43,14 +47,38 @@
     data() {
       return {
         blendMode: 'normal',
+        color: '#000',
+        bgColor: '#fff',
       }
     }
   }
 </script>
 
-<style lang="scss" scoped>
-  .css-mode{
-    height: 100%;
-    background: url(./../assets/images/bck.jpg) 0 0 / contain no-repeat, url(./../assets/images/girl.jpg)  0 280px / contain no-repeat;
+<style>
+  body {
+    background-color: #fff;
   }
+</style>
+
+<style lang="scss" scoped>
+  .text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    font-size: 7em;
+    font-weight: 600;
+    color: black;
+    background: white;
+    text-align: center;
+    mix-blend-mode: normal;
+  }
+
+  .css-mode {
+    position: relative;
+    height: 100%;
+    background: url(./../assets/images/stena.jpg) 0 / cover no-repeat;
+  }
+
 </style>

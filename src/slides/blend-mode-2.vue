@@ -6,33 +6,12 @@
     </p>
     <div class="info">
       <h1>CSS Blend Mode</h1>
-      <div class="styles">
-        <div class="counter">
-          <p v-for="n in 15">{{ n }}</p>
-        </div>
-        <div class="css-area">
-          <pre rel="css">
-
-<span>.wrapper</span> {
-  background: url(./../assets/images/bck.jpg),
-              url(./../assets/images/girl.jpg)
-  background-blend-mode: <textarea name="grid" v-model="blendMode"></textarea>;
-}
-
-
-
-
-
-// normal | multiply | screen | overlay
-// darken | lighten | color-dodge | color-burn
-// hard-light | soft-light | difference | exclusion
-// hue | saturation | color | luminosity
-          </pre>
-        </div>
+      <div>
+        <div class="photoshop"></div>
       </div>
     </div>
 
-    <div class="grid-block" >
+    <div>
       <div class="css-mode" :style="{backgroundBlendMode: blendMode}"></div>
     </div>
   </div>
@@ -42,15 +21,26 @@
   export default {
     data() {
       return {
-        blendMode: 'normal',
+        blendMode: 'hue',
       }
     }
   }
 </script>
 
+<style>
+  body{
+    background-color: #000;
+  }
+</style>
+
 <style lang="scss" scoped>
-  .css-mode{
+  .css-mode {
     height: 100%;
-    background: url(./../assets/images/bck.jpg) 0 0 / contain no-repeat, url(./../assets/images/girl.jpg)  0 280px / contain no-repeat;
+    background: url(./../assets/images/bck.jpg) center / contain no-repeat, url(./../assets/images/girl.jpg) center / contain no-repeat;
+  }
+
+  .photoshop {
+    height: 430px;
+    background: url(./../assets/images/blend-mode.jpg) center / contain no-repeat;
   }
 </style>
