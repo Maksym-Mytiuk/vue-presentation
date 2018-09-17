@@ -16,11 +16,18 @@ import UsageMeter from '../slides/usage-meter'
 import ConicGradient from '../slides/conic-gradient'
 import ConicGradient2 from '../slides/conic-gradient-2'
 import UsageCg from '../slides/usage-cg'
+import SnapScroll from '../slides/snap-scroll'
+import SnapScroll2 from '../slides/snap-scroll2'
+import UsageSnapScroll from '../slides/usage-snap-scroll'
+import Matches from '../slides/matches'
+import Valid from '../slides/valid'
+import Finish from '../slides/finish'
 
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {path: '/', name: 'home', component: Home},
     {path: '/variable-fonts', name: 'variable-fonts', component: VariableFonts},
@@ -37,5 +44,11 @@ export default new Router({
     {path: '/conic-gradient', name: 'conic-gradient', component: ConicGradient},
     {path: '/conic-gradient-2', name: 'conic-gradient', component: ConicGradient2},
     {path: '/usage-cg', name: 'usage-cg', component: UsageCg},
+    {path: '/snap-scroll', name: 'snap-scroll', component: SnapScroll},
+    {path: '/snap-scroll2', name: 'snap-scroll2', component: SnapScroll2},
+    {path: '/usage-snap-scroll', name: 'usage-snap-scroll', component: UsageSnapScroll},
+    {path: '/matches', name: 'matches', component: Matches},
+    {path: '/valid', name: 'valid', component: Valid},
+    {path: '/finish', name: 'finish', component: Finish},
   ]
 })

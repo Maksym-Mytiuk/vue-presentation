@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/conic-gradient-2">Go to Conic Gradient</router-link>
-      <router-link to="/snap-scroll">Go To CSS Snap Scroll</router-link>
+      <router-link to="/snap-scroll2">Go to Snap Scroll</router-link>
+      <router-link to="/matches">Go to Matches</router-link>
     </p>
     <div class="img-block">
       <img src="./../assets/images/usage-vf.png" class="img">

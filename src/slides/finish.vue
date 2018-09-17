@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/usage">Go to usage</router-link>
+      <router-link to="/valid">Go to :Valid</router-link>
     </p>
     <div class="theme">
       <h1>
-        Вопросы?
+        Questions?
       </h1>
     </div>
   </div>

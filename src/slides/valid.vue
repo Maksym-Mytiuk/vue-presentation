@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/conic-gradient">Go to Conic Gradient</router-link>
-      <router-link to="/usage-cg">Can I use CG</router-link>
+      <router-link to="/matches">Go to Matches</router-link>
+      <router-link to="/finish">Go to Question</router-link>
     </p>
     <div class="info">
       <h1>Conic Gradient</h1>
