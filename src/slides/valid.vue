@@ -5,15 +5,23 @@
       <router-link to="/finish">Go to Question</router-link>
     </p>
     <div class="info">
-      <h1>Conic Gradient</h1>
+      <h1>:valid :invalid</h1>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 16">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
-.round {
-  background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
+<span>.email:focus:invalid + .smile:before</span>> {
+  content: '🙃';
+}
+
+<span>.email:invalid + .smile:before</span>> {
+  content: '😒';
+}
+
+<span>.email:valid + .smile:before</span>> {
+  content: '🤗';
 }
           </pre>
         </div>
@@ -24,7 +32,8 @@
       <div class="wrapper">
         <form class="form-signin">
           <h2 class="form-signin-heading">Please login</h2>
-          <input type="email" class="form-control email" name="username" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+          <input type="email" class="form-control email" name="username" required placeholder="Email Address"
+                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
           <div class="smile"></div>
         </form>
       </div>
@@ -43,6 +52,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .wrapper {
+    position: relative;
+  }
 
   .form-signin {
     padding: 55px 55px 455px;
@@ -72,9 +84,24 @@
       width: 100%;
     }
 
-    .email:focus:invalid + .smile:before{
-      content: '';
+    .email + .smile:before{
       position: absolute;
+      font-size: 2em;
+      top: 136px;
+      left: 383px;
+      z-index: 5;
+    }
+
+    .email:focus:invalid + .smile:before {
+      content: '🙃';
+    }
+
+    .email:invalid + .smile:before {
+      content: '😒';
+    }
+
+    .email:valid + .smile:before {
+      content: '🤗';
     }
   }
 

@@ -12,41 +12,26 @@
         </div>
         <div class="css-area">
           <pre rel="css">
-:matches(.second, .third){
-  color: #ff00ff
+
+:matches(.second, .third) {
+  color: #000
 }
 
-&lt;p class="first">Lorem... &lt;/p>
-&lt;p class="second">Lorem... &lt;/p>
-&lt;p class="third">Lorem... &lt;/p>
-&lt;p class="fourth">Lorem... &lt;/p>
-&lt;p class="fifth">Lorem... &lt;/p>
+button:matches(:hover, :focus){
+  background-color: #2cd5c8;
+}
+
           </pre>
         </div>
       </div>
     </div>
 
     <div class="grid-block">
-      <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
-        doloribus et
-        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
-        quas.</p>
-      <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
-        doloribus et
-        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
-        quas.</p>
-      <p class="third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
-        doloribus et
-        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
-        quas.</p>
-      <p class="fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
-        doloribus et
-        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
-        quas.</p>
-      <p class="fifth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
-        doloribus et
-        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
-        quas.</p>
+      <button class="btn first">Click Me</button>
+      <button class="btn second">Click Me</button>
+      <button class="btn third">Click Me</button>
+      <button class="btn fourth">Click Me</button>
+      <button class="btn fifth">Click Me</button>
     </div>
   </div>
 </template>
@@ -62,7 +47,30 @@
 </script>
 
 <style scoped>
+  .grid-block{
+    display: grid;
+    align-items: center;
+  }
+  button{
+    font-size: 2em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #26a69a;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    transition: .3s;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  }
   :matches(.second, .third) {
-    color: #ff00ff
+    color: #000
+  }
+  button:matches(:hover, :focus){
+    background-color: #2cd5c8;
+    box-shadow: 0 6px 3px 0 rgba(0,0,0,0.14), 0 3px 4px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  }
+
+  button:active{
+    background-color: #26a69a;
   }
 </style>

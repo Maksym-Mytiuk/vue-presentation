@@ -12,12 +12,18 @@
         </div>
         <div class="css-area">
           <pre rel="css">
+:root {
+  --counter: 10;
+}
+
 .round {
-  background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
+  background: conic-gradient(
+               #8E24AA var(--counter),
+               #e1bee7 0deg);
 }
 
 .round:after {
-  counter-increment: percent var(--second-counter);
+  counter-increment: percent var(--counter);
   content: counter(percent) '%';
 }
           </pre>
