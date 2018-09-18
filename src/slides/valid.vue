@@ -15,18 +15,19 @@
 .round {
   background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
 }
-
-.round:after {
-  counter-increment: percent var(--second-counter);
-  content: counter(percent) '%';
-}
           </pre>
         </div>
       </div>
     </div>
 
     <div class="grid-block">
-      <div class="round"></div>
+      <div class="wrapper">
+        <form class="form-signin">
+          <h2 class="form-signin-heading">Please login</h2>
+          <input type="email" class="form-control email" name="username" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+          <div class="smile"></div>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -37,66 +38,44 @@
       return {
         first: 'conic-gradient(from 45deg, white, black, white)',
       }
-    },
-    mounted() {
-      let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-      setTimeout(() => {
-        let count = 10,
-          maxCount = 90,
-          speed = 1,
-          animationChart = () => {
-            count = count + speed;
-            if (count <= maxCount) {
-              document.documentElement.style.setProperty(`--main-counter`, count + `%`);
-              document.documentElement.style.setProperty(`--second-counter`, count);
-              requestAnimationFrame(animationChart);
-            }
-          };
-        animationChart();
-      }, 1500)
     }
   }
 </script>
-<style>
-  :root {
-    --main-counter: 10%;
-    --second-counter: 10;
-  }
-</style>
-<style scoped>
-  .grid-block {
-    display: grid;
+
+<style lang="scss" scoped>
+
+  .form-signin {
+    padding: 55px 55px 455px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .form-signin-heading,
+    .checkbox {
+      margin-bottom: 30px;
+    }
+
+    .checkbox {
+      font-weight: normal;
+    }
+
+    .form-control {
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+
+      &:focus {
+        z-index: 2;
+      }
+    }
+    input {
+      width: 100%;
+    }
+
+    .email:focus:invalid + .smile:before{
+      content: '';
+      position: absolute;
+    }
   }
 
-  .round {
-    position: relative;
-    margin: auto;
-    background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
-    border-radius: 50%;
-    width: 40vh;
-    height: 40vh;
-  }
-
-  .round:before {
-    content: "";
-    position: absolute;
-    width: 35vh;
-    height: 35vh;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background: #e5e5e5;
-    transform: translate(-50%, -50%);
-  }
-
-  .round:after {
-    counter-increment: percent var(--second-counter);
-    content: counter(percent) '%';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    font-size: 10vh;
-    transform: translate(-50%, -50%);
-  }
 </style>

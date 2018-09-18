@@ -5,28 +5,48 @@
       <router-link to="/valid">Go to :Valid</router-link>
     </p>
     <div class="info">
-      <h1>Conic Gradient</h1>
+      <h1>:matches</h1>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 16">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
-.round {
-  background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
+:matches(.second, .third){
+  color: #ff00ff
 }
 
-.round:after {
-  counter-increment: percent var(--second-counter);
-  content: counter(percent) '%';
-}
+&lt;p class="first">Lorem... &lt;/p>
+&lt;p class="second">Lorem... &lt;/p>
+&lt;p class="third">Lorem... &lt;/p>
+&lt;p class="fourth">Lorem... &lt;/p>
+&lt;p class="fifth">Lorem... &lt;/p>
           </pre>
         </div>
       </div>
     </div>
 
     <div class="grid-block">
-      <div class="round"></div>
+      <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
+        doloribus et
+        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
+        quas.</p>
+      <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
+        doloribus et
+        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
+        quas.</p>
+      <p class="third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
+        doloribus et
+        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
+        quas.</p>
+      <p class="fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
+        doloribus et
+        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
+        quas.</p>
+      <p class="fifth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus, ad aliquam debitis
+        doloribus et
+        laborum nostrum quibusdam quidem ratione sequi sit soluta suscipit. Animi corporis iure laboriosam numquam
+        quas.</p>
     </div>
   </div>
 </template>
@@ -37,66 +57,12 @@
       return {
         first: 'conic-gradient(from 45deg, white, black, white)',
       }
-    },
-    mounted() {
-      let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-      setTimeout(() => {
-        let count = 10,
-          maxCount = 90,
-          speed = 1,
-          animationChart = () => {
-            count = count + speed;
-            if (count <= maxCount) {
-              document.documentElement.style.setProperty(`--main-counter`, count + `%`);
-              document.documentElement.style.setProperty(`--second-counter`, count);
-              requestAnimationFrame(animationChart);
-            }
-          };
-        animationChart();
-      }, 1500)
     }
   }
 </script>
-<style>
-  :root {
-    --main-counter: 10%;
-    --second-counter: 10;
-  }
-</style>
+
 <style scoped>
-  .grid-block {
-    display: grid;
-  }
-
-  .round {
-    position: relative;
-    margin: auto;
-    background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
-    border-radius: 50%;
-    width: 40vh;
-    height: 40vh;
-  }
-
-  .round:before {
-    content: "";
-    position: absolute;
-    width: 35vh;
-    height: 35vh;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background: #e5e5e5;
-    transform: translate(-50%, -50%);
-  }
-
-  .round:after {
-    counter-increment: percent var(--second-counter);
-    content: counter(percent) '%';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    font-size: 10vh;
-    transform: translate(-50%, -50%);
+  :matches(.second, .third) {
+    color: #ff00ff
   }
 </style>
