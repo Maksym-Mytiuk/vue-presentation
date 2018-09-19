@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/meter-2">Go to Meter</router-link>
-      <router-link to="/conic-gradient">Go to Conic Gradient</router-link>
+      <router-link to="/valid">Go to :Valid</router-link>
+      <router-link to="/finish">Finish</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/meter.png" class="img">
+      <img src="./../assets/images/valid.png" class="img">
     </div>
   </div>
 </template>

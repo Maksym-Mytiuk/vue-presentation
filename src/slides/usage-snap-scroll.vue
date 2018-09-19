@@ -5,7 +5,7 @@
       <router-link to="/matches">Go to Matches</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/usage-vf.png" class="img">
+      <img src="./../assets/images/sc.png" class="img">
     </div>
   </div>
 </template>

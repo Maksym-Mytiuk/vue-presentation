@@ -5,7 +5,7 @@
       <router-link to="/blend-mode">Go to Blend Mode</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/usage-vf.png" class="img">
+      <img src="./../assets/images/bf.png" class="img">
     </div>
   </div>
 </template>

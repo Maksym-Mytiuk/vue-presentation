@@ -5,7 +5,7 @@
       <router-link to="/usage-snap-scroll">Can I use Snap Scroll</router-link>
     </p>
     <div class="info">
-      <h1>Conic Gradient</h1>
+      <h1>Snap Scroll</h1>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 16">{{ n }}</p>

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/matches">Go to Matches</router-link>
-      <router-link to="/finish">Go to Question</router-link>
+      <router-link to="/usage-matches">Can I use Matches</router-link>
+      <router-link to="/usage-valid">Can I use Valid</router-link>
     </p>
     <div class="info">
       <h1>:valid :invalid</h1>
@@ -12,12 +12,12 @@
         </div>
         <div class="css-area">
           <pre rel="css">
-<span>.email:focus:invalid + .smile:before</span>> {
-  content: '🙃';
-}
-
 <span>.email:invalid + .smile:before</span>> {
   content: '😒';
+}
+
+<span>.email:focus:invalid + .smile:before</span>> {
+  content: '🙃';
 }
 
 <span>.email:valid + .smile:before</span>> {
@@ -72,7 +72,7 @@
 
     .form-control {
       position: relative;
-      font-size: 16px;
+      font-size: 3em;
       height: auto;
       padding: 10px;
 
@@ -86,9 +86,9 @@
 
     .email + .smile:before{
       position: absolute;
-      font-size: 2em;
-      top: 136px;
-      left: 383px;
+      font-size: 16em;
+      top: 43%;
+      right: 24%;
       z-index: 5;
     }
 

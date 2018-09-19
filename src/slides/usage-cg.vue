@@ -5,7 +5,7 @@
       <router-link to="/snap-scroll">Go To CSS Snap Scroll</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/usage-vf.png" class="img">
+      <img src="./../assets/images/cg.png" class="img">
     </div>
   </div>
 </template>

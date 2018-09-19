@@ -2,7 +2,7 @@
   <div class="container">
     <p style="position: absolute; top: 0;">
       <router-link to="/usage-snap-scroll">Can I use Snap Scroll</router-link>
-      <router-link to="/valid">Go to :Valid</router-link>
+      <router-link to="/usage-matches">Can I use :Matches</router-link>
     </p>
     <div class="info">
       <h1>:matches</h1>

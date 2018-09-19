@@ -5,7 +5,7 @@
       <router-link to="/backdrop-filter">Go to Backdrop-Filter</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/usage-vf.png" class="img">
+      <img src="./../assets/images/vf.png" class="img">
     </div>
   </div>
 </template>

@@ -5,7 +5,7 @@
       <router-link to="/meter">Go to Metter</router-link>
     </p>
     <div class="img-block">
-      <img src="./../assets/images/usage-vf.png" class="img">
+      <img src="./../assets/images/bm.png" class="img">
     </div>
   </div>
 </template>

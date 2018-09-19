@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/valid">Go to :Valid</router-link>
+      <router-link to="/usage-valid">Can I use :Valid</router-link>
     </p>
     <div class="theme">
       <h1>

@@ -20,7 +20,9 @@ import SnapScroll from '../slides/snap-scroll'
 import SnapScroll2 from '../slides/snap-scroll2'
 import UsageSnapScroll from '../slides/usage-snap-scroll'
 import Matches from '../slides/matches'
+import UsageMatches from '../slides/usage-matches'
 import Valid from '../slides/valid'
+import UsageValid from '../slides/usage-valid'
 import Finish from '../slides/finish'
 
 
@@ -48,7 +50,9 @@ export default new Router({
     {path: '/snap-scroll2', name: 'snap-scroll2', component: SnapScroll2},
     {path: '/usage-snap-scroll', name: 'usage-snap-scroll', component: UsageSnapScroll},
     {path: '/matches', name: 'matches', component: Matches},
+    {path: '/usage-matches', name: 'usage-matches', component: UsageMatches},
     {path: '/valid', name: 'valid', component: Valid},
+    {path: '/usage-valid', name: 'usage-valid', component: UsageValid},
     {path: '/finish', name: 'finish', component: Finish},
   ]
 })
