@@ -47,6 +47,11 @@ button:matches(:hover, :focus){
 </script>
 
 <style scoped>
+
+  .container{
+    margin-top: 100px;
+  }
+
   .grid-block{
     display: grid;
     align-items: center;

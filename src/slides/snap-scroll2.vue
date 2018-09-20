@@ -14,8 +14,6 @@
           <pre rel="css">
 
 <span>.scrollport</span> {
-  width: 600px;
-  margin: 0 auto;
   overflow: auto;
   scroll-snap-type: x mandatory;
 }
@@ -23,6 +21,13 @@
 <span>img</span> {
   scroll-snap-align: <textarea v-model="scrollValue"></textarea>;
 }
+
+
+
+
+
+//proximity
+//mandatory
           </pre>
         </div>
       </div>

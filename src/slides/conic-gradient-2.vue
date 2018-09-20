@@ -71,6 +71,10 @@
   }
 </style>
 <style scoped>
+  .container{
+    margin-top: 100px;
+  }
+
   .grid-block {
     display: grid;
   }

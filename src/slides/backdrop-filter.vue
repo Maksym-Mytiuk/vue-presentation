@@ -51,6 +51,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .container{
+    margin-top: 100px;
+  }
   .css-mode {
     position: relative;
     height: 100%;

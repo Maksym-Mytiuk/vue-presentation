@@ -8,7 +8,7 @@
       <h1>CSS Blend Mode</h1>
       <div class="styles">
         <div class="counter">
-          <p v-for="n in 15">{{ n }}</p>
+          <p v-for="n in 17">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
@@ -51,6 +51,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .container{
+    margin-top: 75px;
+  }
   .css-mode{
     height: 100%;
     background: url(./../assets/images/bck.jpg) 0 0 / contain no-repeat, url(./../assets/images/girl.jpg)  0 280px / contain no-repeat;

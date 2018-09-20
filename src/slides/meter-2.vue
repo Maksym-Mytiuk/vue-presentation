@@ -8,7 +8,7 @@
       <h1>Meter</h1>
       <div class="styles">
         <div class="counter">
-          <p v-for="n in 16">{{ n }}</p>
+          <p v-for="n in 18">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
@@ -22,9 +22,13 @@
 }
 
 <span>meter::-webkit-meter-optimum-value</span> {
-   background: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"&gt;\&lt;text font-size="100" y=".8em" fill="#ffcc00"&gt;&#x2605;&lt;/text&gt;&lt;/svg&gt;' 0 / auto 100%;
+ background: url('data:image/svg+xml,
+    &lt;svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"&gt;\
+        &lt;text font-size="100" y=".8em"
+            fill="#ffcc00"&gt;&#x2605;&lt;/text&gt;
+    &lt;/svg&gt;' 0 / auto 100%;
 }
-
           </pre>
         </div>
       </div>

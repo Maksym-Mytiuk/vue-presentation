@@ -34,6 +34,11 @@
 </style>
 
 <style lang="scss" scoped>
+
+  .container{
+    margin-top: 150px;
+  }
+
   .css-mode {
     height: 100%;
     background: url(./../assets/images/bck.jpg) center / contain no-repeat, url(./../assets/images/girl.jpg) center / contain no-repeat;

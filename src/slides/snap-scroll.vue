@@ -5,7 +5,7 @@
       <router-link to="/snap-scroll2">Go to Snap Scroll</router-link>
     </p>
     <div class="info">
-      <h1>Conic Gradient</h1>
+      <h1>Snap Scroll</h1>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 16">{{ n }}</p>
@@ -112,6 +112,14 @@
   }
 </script>
 <style lang="scss" scoped>
+  .scrollport{
+    padding-top: 120px;
+  }
+
+  .container{
+    margin-top: 100px;
+  }
+
   nav {
     top: 0;
     left: 0;

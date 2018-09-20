@@ -53,6 +53,11 @@
 </script>
 
 <style scoped lang="scss">
+
+  .container{
+    margin-top: 90px;
+  }
+
   .grid-block {
     background: white;
     p {

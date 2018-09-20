@@ -61,6 +61,10 @@
 </style>
 
 <style lang="scss" scoped>
+  .container{
+    margin-top: 100px;
+  }
+
   .text {
     position: absolute;
     bottom: 0;
