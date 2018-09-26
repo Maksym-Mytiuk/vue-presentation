@@ -30,7 +30,7 @@
     align-items: center;
     height: 90vh;
     h1{
-      font-size: 5em;
+      font-size: 10em;
     }
   }
 </style>

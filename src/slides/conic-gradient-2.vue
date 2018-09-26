@@ -13,7 +13,7 @@
         <div class="css-area">
           <pre rel="css">
 :root {
-  --counter: 10;
+  --counter: <textarea v-model="counter"></textarea>;
 }
 
 .round {
@@ -22,17 +22,16 @@
                #e1bee7 0deg);
 }
 
-.round:after {
-  counter-increment: percent var(--counter);
-  content: counter(percent) '%';
-}
           </pre>
         </div>
       </div>
     </div>
 
-    <div class="grid-block">
-      <div class="round"></div>
+    <div class="grid-block" @click="anim">
+      <!--"-->
+      <div class="round" :style="{background: setConicStyle}">
+        <p>{{counter}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -41,37 +40,42 @@
   export default {
     data() {
       return {
-        first: 'conic-gradient(from 45deg, white, black, white)',
+        counter: '10%'
       }
     },
-    mounted() {
-      let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-      setTimeout(() => {
+    computed: {
+      setConicStyle() {
+        return `conic-gradient(#8E24AA ${this.counter}, #e1bee7 0deg)`;
+      }
+    },
+    methods: {
+      anim() {
+        let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
         let count = 10,
           maxCount = 90,
           speed = 1,
           animationChart = () => {
             count = count + speed;
             if (count <= maxCount) {
-              document.documentElement.style.setProperty(`--main-counter`, count + `%`);
-              document.documentElement.style.setProperty(`--second-counter`, count);
+              // document.documentElement.style.setProperty(`--main-counter`, count + `%`);
+              // document.documentElement.style.setProperty(`--second-counter`, count);
+              this.counter = `${count}%`;
               requestAnimationFrame(animationChart);
             }
           };
-        animationChart();
-      }, 1500)
+        animationChart()
+      }
     }
   }
 </script>
 <style>
   :root {
-    --main-counter: 10%;
-    --second-counter: 10;
+    --main-counter: 10;
   }
 </style>
 <style scoped>
-  .container{
+  .container {
     margin-top: 100px;
   }
 
@@ -82,17 +86,17 @@
   .round {
     position: relative;
     margin: auto;
-    background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);
+    /*background: conic-gradient(#8E24AA var(--main-counter), #e1bee7 0deg);*/
     border-radius: 50%;
-    width: 40vh;
-    height: 40vh;
+    width: 475px;
+    height: 475px;
   }
 
   .round:before {
     content: "";
     position: absolute;
-    width: 35vh;
-    height: 35vh;
+    width: 350px;
+    height: 350px;
     top: 50%;
     left: 50%;
     border-radius: 50%;
@@ -100,13 +104,12 @@
     transform: translate(-50%, -50%);
   }
 
-  .round:after {
-    counter-increment: percent var(--second-counter);
-    content: counter(percent) '%';
+  .round p {
+    margin: 0;
     position: absolute;
-    left: 50%;
     top: 50%;
-    font-size: 10vh;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 9em;
+    transform: translate3d(-50%, -50%, 0);
   }
 </style>

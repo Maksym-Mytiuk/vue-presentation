@@ -8,7 +8,7 @@
       <h1>Snap Scroll</h1>
       <div class="styles">
         <div class="counter">
-          <p v-for="n in 16">{{ n }}</p>
+          <p v-for="n in 19">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
@@ -35,14 +35,14 @@
 
     <div class="grid-block">
       <div class="scrollport">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
-        <img src="//placehold.it/400x400" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
+        <img src="//placehold.it/600x600" :style="{scrollSnapAlign: scrollValue}" alt="">
       </div>
     </div>
   </div>
@@ -58,13 +58,17 @@
   }
 </script>
 <style lang="scss" scoped>
+  .container {
+    grid-template-columns: 500px 1fr;
+  }
+
   .grid-block{
     background-color: #fff;
   }
 
   .scrollport {
-    width: 600px;
-    margin: 0 auto;
+    width: 800px;
+    margin: 60px auto;
     overflow: auto;
     white-space: nowrap;
     scroll-snap-type: x mandatory;

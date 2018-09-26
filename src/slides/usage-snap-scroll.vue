@@ -2,7 +2,7 @@
   <div class="container">
     <p style="position: absolute; top: 0;">
       <router-link to="/snap-scroll2">Go to Snap Scroll</router-link>
-      <router-link to="/matches">Go to Matches</router-link>
+      <router-link to="/valid">Go to Valid</router-link>
     </p>
     <div class="img-block">
       <img src="./../assets/images/sc.png" class="img">

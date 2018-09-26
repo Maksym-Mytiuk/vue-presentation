@@ -26,10 +26,14 @@
           <pre rel="css">
 @font-face {
   font-family: Compressa;
-  src: url('src/assets/fonts/compressa.woff2') format('woff-variations');
+  src: url('src/assets/fonts/compressa.woff2')
+        format('woff-variations');
 }
+
 #helloWorld {
-  font-variation-settings: "wght" {{ wght }}, "wdth" {{ wdth }}, "ital" {{ ital }};
+  font-variation-settings: "wght" {{ wght }},
+                          "wdth" {{ wdth }},
+                          "ital" {{ ital }};
 }
           </pre>
           </div>

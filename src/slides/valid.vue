@@ -1,26 +1,26 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/usage-matches">Can I use Matches</router-link>
+      <router-link to="/usage-snap-scroll">Can I use Snap Scroll</router-link>
       <router-link to="/usage-valid">Can I use Valid</router-link>
     </p>
     <div class="info">
       <h1>:valid :invalid</h1>
       <div class="styles">
         <div class="counter">
-          <p v-for="n in 16">{{ n }}</p>
+          <p v-for="n in 19">{{ n }}</p>
         </div>
         <div class="css-area">
           <pre rel="css">
-<span>.email:invalid + .smile:before</span>> {
+<span>.email:invalid + .smile:before</span> {
   content: '😒';
 }
 
-<span>.email:focus:invalid + .smile:before</span>> {
-  content: '🙃';
+<span>.email:focus:invalid + .smile:before</span> {
+  content: '😓';
 }
 
-<span>.email:valid + .smile:before</span>> {
+<span>.email:valid + .smile:before</span> {
   content: '🤗';
 }
           </pre>
@@ -52,12 +52,15 @@
 </script>
 
 <style lang="scss" scoped>
+  pre{
+    font-size: 2.2em;
+  }
   .wrapper {
     position: relative;
   }
 
   .form-signin {
-    padding: 55px 55px 455px;
+    padding: 55px 55px 525px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -93,7 +96,7 @@
     }
 
     .email:focus:invalid + .smile:before {
-      content: '🙃';
+      content: '😓';
     }
 
     .email:invalid + .smile:before {
