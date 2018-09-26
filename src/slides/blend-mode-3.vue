@@ -35,7 +35,7 @@
     <div class="grid-block">
       <div class="css-mode">
         <p class="text" :style="{mixBlendMode: blendMode, color: color, backgroundColor: bgColor}">
-          MIX<br>BLEND<br>MODE
+          БУДЬМО!!!
         </p>
       </div>
     </div>
@@ -61,7 +61,7 @@
 </style>
 
 <style lang="scss" scoped>
-  .container{
+  .container {
     margin-top: 100px;
   }
 
@@ -82,7 +82,7 @@
   .css-mode {
     position: relative;
     height: 100%;
-    background: url(./../assets/images/stena.jpg) 0 / cover no-repeat;
+    background: url(./../assets/images/beer2.png)  0 0 / cover no-repeat
   }
 
 </style>

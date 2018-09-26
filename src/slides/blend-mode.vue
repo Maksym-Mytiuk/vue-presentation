@@ -14,8 +14,8 @@
           <pre rel="css">
 
 <span>.wrapper</span> {
-  background: url(./../assets/images/bck.jpg),
-              url(./../assets/images/girl.jpg)
+              url(./../assets/images/girl.jpg),
+  background: url(./../assets/images/bck.jpg)
   background-position: <textarea v-model="backgroundPosition"></textarea>;
   background-blend-mode: <textarea v-model="blendMode"></textarea>;
 }
@@ -56,6 +56,6 @@
   }
   .css-mode{
     height: 100%;
-    background: url(./../assets/images/bck.jpg) 0 0 / contain no-repeat, url(./../assets/images/girl.jpg)  0 280px / contain no-repeat;
+    background: url(./../assets/images/girl.jpg)  0 0 / contain no-repeat, url(./../assets/images/bck.jpg) 0 280px / contain no-repeat;
   }
 </style>
