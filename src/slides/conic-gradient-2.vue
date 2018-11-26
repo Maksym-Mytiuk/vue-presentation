@@ -40,7 +40,8 @@
   export default {
     data() {
       return {
-        counter: '10%'
+        counter: '10%',
+        maxCount: 90
       }
     },
     computed: {
@@ -53,11 +54,10 @@
         let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
           window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
         let count = 10,
-          maxCount = 90,
           speed = 1,
           animationChart = () => {
             count = count + speed;
-            if (count <= maxCount) {
+            if (count <= this.maxCount) {
               // document.documentElement.style.setProperty(`--main-counter`, count + `%`);
               // document.documentElement.style.setProperty(`--second-counter`, count);
               this.counter = `${count}%`;
@@ -110,6 +110,6 @@
     top: 50%;
     left: 50%;
     font-size: 9em;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate(-50%, -50%);
   }
 </style>

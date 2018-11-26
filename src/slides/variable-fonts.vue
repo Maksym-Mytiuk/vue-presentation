@@ -32,8 +32,8 @@
 
 #helloWorld {
   font-variation-settings: "wght" {{ wght }},
-                          "wdth" {{ wdth }},
-                          "ital" {{ ital }};
+                           "wdth" {{ wdth }},
+                           "ital" {{ ital }};
 }
           </pre>
           </div>
