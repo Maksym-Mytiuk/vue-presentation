@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/variable-fonts">Go to Variable Fonts</router-link>
+      <router-link to="/">Go to Home</router-link>
+      <router-link to="/display-grid">Go to display: grid;</router-link>
     </p>
     <div class="theme">
       <h1>
-        CSS TRICKS
+        CSS GRID
       </h1>
     </div>
   </div>
@@ -18,9 +19,6 @@
 </script>
 
 <style scoped lang="scss">
-  a{
-    margin-left: auto;
-  }
   .container{
     display: block;
   }

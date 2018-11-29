@@ -42,12 +42,10 @@
            class="grid">
         <div class="grid-item grid-item-1" :style="{
       gridArea:firstArea,
-    }">1
-        </div>
+    }">1</div>
         <div class="grid-item grid-item-2" :style="{
       gridArea:secondArea,
-    }">2
-        </div>
+    }">2</div>
       </div>
     </div>
   </div>

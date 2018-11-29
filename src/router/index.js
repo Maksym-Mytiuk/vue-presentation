@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './../slides/home'
-import VariableFonts from '../slides/variable-fonts'
+import DisplayGrid from './../slides/display-grid'
 import GridTemplate from '../slides/grid-template'
 import GridTemplateShort from '../slides/grid-template-short'
 import GridGap from './../slides/grid-gap'
@@ -21,7 +21,7 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {path: '/', name: 'home', component: Home},
-    {path: '/variable-fonts', name: 'variable-fonts', component: VariableFonts},
+    {path: '/display-grid', name: 'display-grid', component: DisplayGrid},
     {path: '/grid-template', name: 'grid-template', component: GridTemplate},
     {path: '/grid-template-short', name: 'grid-template-short', component: GridTemplateShort},
     {path: '/grid-gap', name: 'grid-gap', component: GridGap},
@@ -33,6 +33,6 @@ export default new Router({
     {path: '/grid-area', name: 'grid-area', component: GridArea},
     {path: '/grid-auto-flow', name: 'grid-auto-flow', component: GridAutoFlow},
     {path: '/usage', name: 'usage', component: Usage},
-    {path: '/finish', name: 'grid-auto-flow', component: Finish},
+    {path: '/finish', name: 'finish', component: Finish},
   ]
 })
