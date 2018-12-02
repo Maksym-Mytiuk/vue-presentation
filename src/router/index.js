@@ -12,6 +12,7 @@ import GridTrack from './../slides/grid-track'
 import GridStartEnd from './../slides/start-end'
 import GridRowColumns from './../slides/rows-columns'
 import GridArea from './../slides/grid-area'
+import GridArea2 from './../slides/grid-area-2'
 import GridAutoFlow from './../slides/grid-auto-flow'
 import Usage from './../slides/usage'
 import Finish from './../slides/finish'
@@ -31,6 +32,7 @@ export default new Router({
     {path: '/start-end', name: 'start-end', component: GridStartEnd},
     {path: '/rows-columns', name: 'rows-columns', component: GridRowColumns},
     {path: '/grid-area', name: 'grid-area', component: GridArea},
+    {path: '/grid-area-2', name: 'grid-area-2', component: GridArea2},
     {path: '/grid-auto-flow', name: 'grid-auto-flow', component: GridAutoFlow},
     {path: '/usage', name: 'usage', component: Usage},
     {path: '/finish', name: 'finish', component: Finish},
