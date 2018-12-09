@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-zindex">Go to z-index</router-link>
-      <router-link to="/grid-period-table">Go to Example 1</router-link>
+      <router-link to="/grid-period-table">Go to example 2</router-link>
+      <router-link to="/usage">Go to usage</router-link>
     </p>
     <div class="info">
       <h1>Grid Auto Flow</h1>
@@ -29,23 +29,7 @@
     </div>
 
     <div class="grid-block">
-      <div :style="{
-    display: display,
-    gridGap: gridGap,
-    gridTemplateColumns: gridTemplateColumns,
-    gridAutoFlow: gridAutoFLow,
-  }"
-           class="grid">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item 1" :style="{gridColumn: columnProp}">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item 1 2" :style="{gridRow:rowProp,gridColumn: columnProp}">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item 1 2" :style="{gridRow:rowProp,gridColumn: columnProp}">8</div>
-        <div class="grid-item">9</div>
-      </div>
+
     </div>
   </div>
 </template>
@@ -66,7 +50,5 @@
 </script>
 
 <style scoped>
-  .styles {
-    margin-top: 4em;
-  }
+
 </style>

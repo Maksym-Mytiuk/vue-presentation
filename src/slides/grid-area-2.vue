@@ -2,7 +2,7 @@
   <div class="container">
     <p style="position: absolute; top: 0;">
       <router-link to="/grid-area">Go to grid-area</router-link>
-      <router-link to="/grid-auto-flow">Go to grid-auto-flow</router-link>
+      <router-link to="/grid-zindex">Go to z-index</router-link>
     </p>
     <div class="info">
       <h1>Grid Area</h1>

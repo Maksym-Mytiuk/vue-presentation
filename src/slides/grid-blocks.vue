@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-zindex">Go to z-index</router-link>
-      <router-link to="/grid-period-table">Go to Example 1</router-link>
+      <router-link to="/grid-period-table">Go to example 1</router-link>
+      <router-link to="/grid-blocks-2">Go to example 3</router-link>
     </p>
     <div class="info">
       <h1>Grid Auto Flow</h1>
@@ -29,22 +29,17 @@
     </div>
 
     <div class="grid-block">
-      <div :style="{
-    display: display,
-    gridGap: gridGap,
-    gridTemplateColumns: gridTemplateColumns,
-    gridAutoFlow: gridAutoFLow,
-  }"
-           class="grid">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item 1" :style="{gridColumn: columnProp}">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item 1 2" :style="{gridRow:rowProp,gridColumn: columnProp}">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item 1 2" :style="{gridRow:rowProp,gridColumn: columnProp}">8</div>
-        <div class="grid-item">9</div>
+      <div class="row">
+        <div class="column grid-item">1</div>
+        <div class="column grid-item">2</div>
+        <div class="column grid-item">3</div>
+      </div>
+      <div class="row">
+        <div class="column grid-item">4</div>
+        <div class="column grid-item">5</div>
+      </div>
+      <div class="row">
+        <div class="column grid-item">6</div>
       </div>
     </div>
   </div>
@@ -65,8 +60,21 @@
   }
 </script>
 
-<style scoped>
-  .styles {
-    margin-top: 4em;
+<style lang="scss" scoped>
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:nth-of-type(2){
+      justify-content: space-around;
+    }
+    &:nth-of-type(3){
+      justify-content: center;
+    }
+    .column{
+      margin: 5px;
+      padding: 75px;
+      background: #0092dd;
+    }
   }
 </style>
