@@ -6,27 +6,6 @@
 
     </p>
     <div class="info">
-      <h1>Grid Auto Flow</h1>
-      <div class="styles">
-        <div class="counter">
-          <p v-for="n in 18">{{ n }}</p>
-        </div>
-        <div class="css-area">
-          <pre rel="css">
-
-<span>.grid-container</span> {
-  grid-auto-flow: <textarea v-model="gridAutoFLow"></textarea>
-}
-
-<span>.grid-item:nth-of-type(2n + 4)</span> {
-    grid-column:<textarea v-model="columnProp"></textarea>
-}
-<span>.grid-item:nth-of-type(2n + 6)</span> {
-    grid-row:<textarea v-model="rowProp"></textarea>
-}
-          </pre>
-        </div>
-      </div>
     </div>
 
     <div class="grid-block">
@@ -37,20 +16,27 @@
 
 <script>
   export default {
+    name: "variable-fonts",
     data() {
       return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gridGap: '25px',
-        gridAutoFLow: 'row',
-        columnProp: '',
-        rowProp: ''
+        width: 1819
       }
     }
   }
 </script>
 
 <style scoped>
+  .info{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .grid-block{
+    background: transparent;
+    grid-area: 1 / span 2;
+  }
   .styles {
     margin-top: 4em;
   }
@@ -84,7 +70,8 @@
       text-align: right;
       line-height: 1;
       counter-increment: el;
-      padding: .2em;
+      padding: 0.6em;
+      background: #e4e4e4;
     }
 
     .element::before {
@@ -117,7 +104,7 @@
     .element:nth-child(n + 89):nth-child(-n + 103) { background-color: yellow; }
 
   }
-  @media (min-width: 300px) and (max-width: 1300px), (min-width: 300px) and (max-aspect-ratio: 2/1)  {
+  @media (min-width: 300px) and (max-width: 1200px) {
     .periodic {
       grid-template-columns: repeat(18, 1fr);
     }
