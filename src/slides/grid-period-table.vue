@@ -3,7 +3,6 @@
     <p style="position: absolute; top: 0;">
       <router-link to="/grid-auto-flow">Go to auto-flow</router-link>
       <router-link to="/grid-blocks">Go to example 2</router-link>
-
     </p>
     <div class="info">
     </div>
@@ -26,13 +25,6 @@
 </script>
 
 <style scoped>
-  .info{
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
   .grid-block{
     background: transparent;
     grid-area: 1 / span 2;
@@ -70,7 +62,7 @@
       text-align: right;
       line-height: 1;
       counter-increment: el;
-      padding: 0.6em;
+      padding: 1em 0.2em;
       background: #e4e4e4;
     }
 

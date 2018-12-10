@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-period-table">Go to example 2</router-link>
+      <router-link to="/grid-blocks">Go to example 2</router-link>
       <router-link to="/usage">Go to usage</router-link>
     </p>
     <div class="info">
@@ -12,24 +12,23 @@
         </div>
         <div class="css-area">
           <pre rel="css">
+<span>.grid-item-1:</span> {grid-area: item1}
+<span>.grid-item-2:</span> {grid-area: item2}
+<span>.grid-item-3:</span> {grid-area: item3}
+<span>.grid-item-4:</span> {grid-area: item4}
+<span>.grid-item-5:</span> {grid-area: item5}
+<span>.grid-item-6:</span> {grid-area: item6}
 
-<span>.grid-container</span> {
-  grid-auto-flow: <textarea v-model="gridAutoFLow"></textarea>
-}
-
-<span>.grid-item:nth-of-type(2n + 4)</span> {
-    grid-column:<textarea v-model="columnProp"></textarea>
-}
-<span>.grid-item:nth-of-type(2n + 6)</span> {
-    grid-row:<textarea v-model="rowProp"></textarea>
-}
+grid-template-rows: <textarea v-model="gridTemplateRows"></textarea>
+grid-template-columns: <textarea v-model="gridTemplateColumns"></textarea>
+grid-template-areas: <textarea style="height: 133px" v-model="gridTemplateAreas"></textarea>
           </pre>
         </div>
       </div>
     </div>
 
-    <div class="grid-block">
-
+    <div class="grid-block" :style="{gridTemplateAreas: gridTemplateAreas, gridTemplateColumns: gridTemplateColumns, gridTemplateRows: gridTemplateRows}">
+      <div class="grid-item" v-for="n in 6" :class="[`grid-item-` + n]">{{n}}</div>
     </div>
   </div>
 </template>
@@ -38,17 +37,36 @@
   export default {
     data() {
       return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gridGap: '25px',
-        gridAutoFLow: 'row',
-        columnProp: '',
-        rowProp: ''
+        gridTemplateAreas: '',
+        gridTemplateColumns: '',
+        gridTemplateRows: '',
       }
     }
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .grid-block{
+    display: grid;
+  }
+  .grid-item{
+    &:nth-of-type(1){
+      grid-area: item1;
+    }
+    &:nth-of-type(2){
+      grid-area: item2;
+    }
+    &:nth-of-type(3){
+      grid-area: item3;
+    }
+    &:nth-of-type(4){
+      grid-area: item4;
+    }
+    &:nth-of-type(5){
+      grid-area: item5;
+    }
+    &:nth-of-type(6){
+      grid-area: item6;
+    }
+  }
 </style>
