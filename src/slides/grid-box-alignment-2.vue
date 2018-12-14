@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-template-areas">Go to grid-template-areas</router-link>
-      <router-link to="/grid-box-alignment-2">Go to grid-box-alignment</router-link>
+      <router-link to="/grid-box-alignment">Go to box-alignment</router-link>
+      <router-link to="/grid-zindex">Go to z-index</router-link>
     </p>
     <div class="info">
       <h1>Box Alignment</h1>
@@ -19,10 +19,8 @@
 <span>.grid-container</span> {
   display: grid;
   grid-gap: 25px;
-  justify-items: <textarea v-model="justifyItems"></textarea>
-  align-items: <textarea v-model="alignItems"></textarea>
-  justify-content: <textarea v-model="justifyContent"></textarea>
-  align-content: <textarea v-model="alignContent"></textarea>
+  justify-self: <textarea v-model="justifySelf"></textarea>
+  align-self: <textarea v-model="alignSelf"></textarea>
 }
           </pre>
         </div>

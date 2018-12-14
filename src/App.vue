@@ -150,4 +150,16 @@
     border: 1px solid;
     padding: 5px;
   }
+
+  @media (max-width: 1280px){
+    html{
+      font-size: 90%;
+    }
+  }
+
+  @media (max-width: 1024px){
+    html{
+      font-size: 85%;
+    }
+  }
 </style>

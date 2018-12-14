@@ -2,7 +2,7 @@
   <div class="container">
     <p style="position: absolute; top: 0;">
       <router-link to="/rows-columns">Go to grows-columns</router-link>
-      <router-link to="/grid-area-2">Go to grid-areas</router-link>
+      <router-link to="/grid-auto-flow">Go to grid-auto-flow</router-link>
     </p>
     <div class="info">
       <h1>Grid Area</h1>

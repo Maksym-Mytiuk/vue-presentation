@@ -8,6 +8,7 @@ import GridTemplateShort from '../slides/grid-template-short'
 import GridGap from './../slides/grid-gap'
 import GridTemplateAreas from './../slides/grid-template-areas'
 import GridBoxAligment from './../slides/grid-box-alignment'
+import GridBoxAligment2 from './../slides/grid-box-alignment-2'
 import GridTrack from './../slides/grid-track'
 import GridStartEnd from './../slides/start-end'
 import GridRowColumns from './../slides/rows-columns'
@@ -32,6 +33,7 @@ export default new Router({
     {path: '/grid-gap', name: 'grid-gap', component: GridGap},
     {path: '/grid-template-areas', name: 'grid-template-areas', component: GridTemplateAreas},
     {path: '/grid-box-alignment', name: 'grid-box-alignment', component: GridBoxAligment},
+    {path: '/grid-box-alignment-2', name: 'grid-box-alignment-2', component: GridBoxAligment2},
     {path: '/grid-track', name: 'grid-track', component: GridTrack},
     {path: '/start-end', name: 'start-end', component: GridStartEnd},
     {path: '/rows-columns', name: 'rows-columns', component: GridRowColumns},

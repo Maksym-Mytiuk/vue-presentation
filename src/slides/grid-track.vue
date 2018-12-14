@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-box-alignment">Go to grid-box-alignment</router-link>
+      <router-link to="/grid-zindex">Go to z-index</router-link>
       <router-link to="/start-end">Go to start-end</router-link>
     </p>
     <div class="img-block">

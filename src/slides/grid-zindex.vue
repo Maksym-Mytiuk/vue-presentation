@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <p style="position: absolute; top: 0;">
-      <router-link to="/grid-area-2">Go to grid-area</router-link>
-      <router-link to="/grid-auto-flow">Go to grid-auto-flow</router-link>
+      <router-link to="/grid-box-alignment-2">Go to box-alignment</router-link>
+      <router-link to="/grid-track">Go to grid-track</router-link>
     </p>
     <div class="info">
-      <h1>Grid Area</h1>
+      <h1>Grid z-index</h1>
       <div class="styles">
         <div class="counter">
           <p v-for="n in 19">{{ n }}</p>
@@ -73,12 +73,12 @@
 
 <style lang="scss" scoped>
   .grid-item{
-    background: rgba(15, 255, 0, 0.87);
+    background: rgba(15, 255, 0, .6);
     &:nth-of-type(2){
-      background: rgba(0, 141, 255, 0.87);
+      background: rgba(0, 141, 255, .6);
      }
     &:nth-of-type(3){
-      background: rgba(255, 0, 19, 0.87);
+      background: rgba(255, 0, 19, .6);
      }
   }
 </style>
