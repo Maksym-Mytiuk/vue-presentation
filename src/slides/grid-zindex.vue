@@ -13,12 +13,7 @@
         <div class="css-area">
           <pre rel="css">
 
-<span>.grid-container</span> {
-  display: grid;
-  grid-gap; 25px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-}
+
 <span>.grid-item-1</span> {
     grid-area:<textarea v-model="firstArea"></textarea>
     z-index:<textarea v-model="firstAreaZindex"></textarea>

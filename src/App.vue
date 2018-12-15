@@ -159,7 +159,7 @@
 
   @media (max-width: 1024px){
     html{
-      font-size: 85%;
+      font-size: 80%;
     }
   }
 </style>
